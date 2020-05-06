@@ -1,0 +1,6 @@
+[submodule "Senior Project/Forum"]
+	path = Senior Project/Forum
+	url = https://github.com/mrivnak/Forum.git
+[submodule "Software Engineering/Codecamp"]
+	path = Software Engineering/Codecamp
+	url = https://github.com/mrivnak/codecamp.git
