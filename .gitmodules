@@ -4,3 +4,6 @@
 [submodule "Senior Project/GameBoy"]
 	path = Senior Project/GameBoy
 	url = https://github.com/mrivnak/GameBoy
+[submodule "Web Development/Project/Forum"]
+	path = Web Development/Project/Forum
+	url = https://github.com/mrivnak/Forum
