@@ -1,0 +1,24 @@
+{
+	"folders": [
+		{
+			"name": "Classwork",
+			"path": "."
+		},
+		{
+			"name": "GameBoy",
+			"path": "Senior Project\\GameBoy"
+		},
+		{
+			"name": "Forum",
+			"path": "Web Development\\Project\\Forum"
+		},
+		{
+			"name": "Assignment 0",
+			"path": "Parallel Computing\\Assignment 0"
+		},
+		{
+			"name": "Intro",
+			"path": "Programming Languages\\F#\\Intro"
+		}
+	]
+}
