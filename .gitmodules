@@ -1,9 +1,14 @@
 [submodule "Software Engineering/Codecamp"]
 	path = Software Engineering/Codecamp
 	url = https://github.com/mrivnak/codecamp.git
+	update = merge
 [submodule "Senior Project/GameBoy"]
 	path = Senior Project/GameBoy
 	url = https://github.com/mrivnak/GameBoy
+	update = merge
+	branch = develop
 [submodule "Web Development/Project/Forum"]
 	path = Web Development/Project/Forum
 	url = https://github.com/mrivnak/Forum
+	update = merge
+	branch = develop
