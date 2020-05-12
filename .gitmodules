@@ -2,6 +2,7 @@
 	path = Software Engineering/Codecamp
 	url = https://github.com/mrivnak/codecamp.git
 	update = merge
+	branch = master
 [submodule "Senior Project/GameBoy"]
 	path = Senior Project/GameBoy
 	url = https://github.com/mrivnak/GameBoy
