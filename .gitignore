@@ -400,9 +400,11 @@ pip-selfcheck.json
 !.vscode/tasks.json
 !.vscode/launch.json
 !.vscode/extensions.json
+.ionide/*
 
 ### VisualStudioCode Patch ###
 # Ignore all local history of files
 .history
 
 # End of https://www.gitignore.io/api/c,node,venv,react,cmake,fsharp,django,python,fortran,visualstudiocode
+
