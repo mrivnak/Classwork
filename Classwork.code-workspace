@@ -21,6 +21,11 @@
 			"path": "Programming Languages/F#/Intro"
 		},
 		{
+			"name": "Lab 1",
+			"path": "Programming Languages/F#/Lab 1"
+		},
+		{
+			"name": "Codecamp",
 			"path": "Software Engineering/Codecamp"
 		}
 	]
