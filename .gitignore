@@ -400,11 +400,7 @@ pip-selfcheck.json
 !.vscode/tasks.json
 !.vscode/launch.json
 !.vscode/extensions.json
-<<<<<<< HEAD
 .ionide/
-=======
-.ionide/*
->>>>>>> f45d5f011349fa063c7d557114afda106a267abc
 
 ### VisualStudioCode Patch ###
 # Ignore all local history of files
