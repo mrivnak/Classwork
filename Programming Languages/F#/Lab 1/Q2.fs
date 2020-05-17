@@ -26,4 +26,5 @@ let main argv =
         | [] -> 0.0
         | x -> float (sum arr) / float (length arr)
     printfn "%f" (avg [1..4])
+    
     0 // return an integer exit code

@@ -11,11 +11,12 @@ let main argv =
     let add in0 in1 =
         in0 + in1
 
-    let rec sum list =
-        match list with
+    let rec sum arr =
+        match arr with
         | [] -> 0
         | x :: xs -> add x (sum xs)
 
     printfn "%d" (add 25 15)
     printfn "%d" (sum [18; 34; 13; 19])
+    
     0 // return an integer exit code

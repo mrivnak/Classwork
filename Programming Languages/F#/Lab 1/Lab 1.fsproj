@@ -1,13 +1,10 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
-
+<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
+    <RootNamespace>Lab_1</RootNamespace>
     <OutputType>Exe</OutputType>
     <TargetFramework>netcoreapp3.1</TargetFramework>
-    <RootNamespace>Lab_1</RootNamespace>
   </PropertyGroup>
-
   <ItemGroup>
-    <Compile Include="Q3.fs" />
+    <Compile Include="Q3a.fs" />
   </ItemGroup>
-
 </Project>
