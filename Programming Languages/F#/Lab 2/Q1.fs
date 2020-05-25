@@ -4,10 +4,7 @@ open System
 
 [<EntryPoint>]
 let main argv =
-    let rec fact x =
-        match x with
-        | 0 -> 1
-        | _ -> x * fact (x - 1)
-
-    printfn "%d" (fact 5)
+    let cubes list =
+        List.map (fun n -> n * n * n) list
+    printfn "%A" (cubes [2; 4; 6])
     0 // return an integer exit code
