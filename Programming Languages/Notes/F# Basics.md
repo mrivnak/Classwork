@@ -1,5 +1,6 @@
 # F# Basics
-### Average Function
+
+## Average Function
 
 In Python:
 
@@ -24,7 +25,7 @@ let averageOf numbers =
     avg 0 0.0 numbers
 ```
 
-### isOdd Example
+## isOdd Example
 
 ```Fsharp
 let isOdd x = x % 2 <> 0
@@ -49,5 +50,5 @@ let addOneIfOdd input =
     |_ [incomplete code]
 ```
 
-### Pattern matching using quards (`when` clauses)
+## Pattern matching using quards (`when` clauses)
 
