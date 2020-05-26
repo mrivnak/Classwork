@@ -4,12 +4,13 @@ open System
 
 [<EntryPoint>]
 let main argv =
-    let rec fact x =
-        match x with
-        | 0 -> bigint 1
-        | _ -> bigint x * fact (x - 1)
+    let vecadd list1 list2 =
+        List.map2 (+) list1 list2
+        // List.map2 (fun x y -> x + y) list1 list2
+        // Originally the function on the previous line was (fun x y -> x + y)
+        // The F# linter in VS Code suggested I not reimplement a function where no arguments are mutable
+        // That led to some research and the simple function used above
 
-    let C n k =
-        (fact n) / ((fact k) * (fact (n - k)))
-    printfn "%A" (C 20 5)
+    printfn "%A" (vecadd [1; 2; 3] [4; 5; 6])
+    printfn "%A" (vecadd [1; 2; -3; 4] [4; -5; 6; 7])
     0 // return an integer exit code

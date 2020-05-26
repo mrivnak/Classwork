@@ -63,7 +63,58 @@
     ```
 
     ```fsharp
+    let main argv =
+        let vecadd list1 list2 =
+            List.map2 (+) list1 list2
+            // List.map2 (fun x y -> x + y) list1 list2
+            // Originally the function on the previous line was (fun x y -> x + y)
+            // The F# linter in VS Code suggested I not reimplement a function where no arguments are mutable
+            // That led to some research and the simple function used above
+
+        printfn "%A" (vecadd [1; 2; 3] [4; 5; 6])
+        printfn "%A" (vecadd [1; 2; -3; 4] [4; -5; 6; 7])
+        0 // return an integer exit code
     ```
 
     ```plaintext
+    [5; 7; 9]
+    [5; -3; 3; 11]
+    ```
+
+4. Use vecadd to implement matrix addition.  The function matadd will add two 2 x 3 matrices. Assume the matrices to be added are:
+
+    ```plaintext
+    M1 = 1 2 3
+         4 5 6
+
+    M2 = 7 8 9
+         1 2 3
+    ```
+
+    Organized as lists of lists, the matrices to be added are
+
+    ```plaintext
+    M1 = [[1; 4]; [2; 5]; [3; 6]]
+    M2 = [[7; 1]; [8; 2]; [9; 3]]
+    ```
+
+    The sublists represent columns of the matrices.
+
+    ```fsharp
+    let main argv =
+        let rec vecadd list1 list2 =
+            List.map2 (+) list1 list2
+
+        let matadd vec1 vec2 =
+            List.map2 (vecadd) vec1 vec2
+
+        let M1 = [[1; 4]; [2; 5]; [3; 6]]
+        let M2 = [[7; 1]; [8; 2]; [9; 3]]
+
+        printfn "%A" (matadd M1 M2)
+        0 // return an integer exit code
+    ```
+
+    ```plaintext
+    [[8; 5]; [10; 7]; [12; 9]]
     ```
