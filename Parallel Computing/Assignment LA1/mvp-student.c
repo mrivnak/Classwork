@@ -7,18 +7,23 @@
 int main (int argc, char **argv) {
     const unsigned int size = 5;
 
-    double ** matrix = allocMat(size, size);
+    double ** matrix2 = allocMat2(size, size);
+    double * matrix1 = allocMat1(size, size);
     double * vector = allocVec(size);
     
-    assignMat(matrix, size, size);
+    // assignMat2(matrix2, size, size);
+    assignMat1(matrix1, size, size);
     assignVec(vector, size);
     
-    double* result = mvp2(matrix, vector, size);
+    //double* result = mvp2(matrix2, vector, size);
+    double* result = mvp1(matrix1, vector, size);
 
-    printMatVec(matrix, vector, result, size, size);
+    // printMatVec2(matrix2, vector, result, size, size);
+    printMatVec1(matrix1, vector, result, size, size);
 
     freeVec(vector);
-    freeMat(matrix, size);
+    freeMat2(matrix2, size);
+    freeMat1(matrix1);
     return 0;
 }
 
@@ -51,7 +56,7 @@ double dot(double* a, double* b, int size) {
     return result;
 }
 
-double** allocMat(int rows, int cols) {
+double** allocMat2(int rows, int cols) {
 	double** mat = (double**) malloc(rows*sizeof(double*));
 
     for (int i = 0; i < rows; i++) {
@@ -61,12 +66,18 @@ double** allocMat(int rows, int cols) {
     return mat;
 }
 
+double* allocMat1(int rows, int cols) {
+	double* mat = (double*) malloc(rows*cols*sizeof(double));
+
+    return mat;
+}
+
 double* allocVec(int size) {
     double* vec = (double*) malloc(size*sizeof(double*));
     return vec;
 }
 
-void assignMat(double** mat, int rows, int cols) {
+void assignMat2(double** mat, int rows, int cols) {
     for (int i = 0; i < rows; i++) {
         for (int j = 0; j < cols; j++) {
             if (i == j) {
@@ -82,13 +93,29 @@ void assignMat(double** mat, int rows, int cols) {
     }
 }
 
+void assignMat1(double* mat, int rows, int cols) {
+    for (int i = 0; i < rows; i++) {
+        for (int j = 0; j < cols; j++) {
+            if (i == j) {
+                mat[i+(j*cols)] = 2;
+            }
+            else if (i - j == 1 || j - i == 1) {
+                mat[i+(j*cols)] = 1;
+            }
+            else {
+                mat[i+(j*cols)] = 0;
+            }
+        }
+    }
+}
+
 void assignVec(double* vec, int size) {
     for (int i = 0; i < size; i++) {
         vec[i] = 1;
     }
 }
 
-void freeMat(double** mat, int rows) {
+void freeMat2(double** mat, int rows) {
     for (int i = 0; i < rows; i++) {
         free(mat[i]);
     }
@@ -96,11 +123,15 @@ void freeMat(double** mat, int rows) {
     free(mat);
 }
 
+void freeMat1(double* mat) {
+    free(mat);
+}
+
 void freeVec(double* vec) {
     free(vec);
 }
 
-void printMatVec(double** mat, double* vec, double* res, int rows, int cols) {
+void printMatVec2(double** mat, double* vec, double* res, int rows, int cols) {
     for (int i = 0; i < rows; i++) {
         for (int j = 0; j < cols; j++) {
             printf("%.2f ", mat[i][j]);
@@ -109,11 +140,30 @@ void printMatVec(double** mat, double* vec, double* res, int rows, int cols) {
     }
 }
 
-void printMat(double** mat, int rows, int cols) {
+void printMatVec1(double* mat, double* vec, double* res, int rows, int cols) {
+    for (int i = 0; i < rows; i++) {
+        for (int j = 0; j < cols; j++) {
+            printf("%.2f ", mat[i+(j*cols)]);
+        }
+        printf("\t%.2f   %c  %.2f\n", vec[i], i+1==((rows+(2-1))/2)?'=':' ', res[i]);
+    }
+}
+
+void printMat2(double** mat, int rows, int cols) {
     printf("Matrix:\n");
     for (int i = 0; i < rows; i++) {
         for (int j = 0; j < cols; j++) {
             printf(" %.2f ", mat[i][j]);
+        }
+        printf("\n");
+    }
+}
+
+void printMat1(double* mat, int rows, int cols) {
+    printf("Matrix:\n");
+    for (int i = 0; i < rows; i++) {
+        for (int j = 0; j < cols; j++) {
+            printf(" %.2f ", mat[i+(j*cols)]);
         }
         printf("\n");
     }
