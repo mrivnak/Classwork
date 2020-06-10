@@ -1,0 +1,58 @@
+<html>
+<body>
+	<form method="get" action="process.php">
+		<fieldset>
+			<legend>Registration Form</legend>
+
+			<p>
+				<label>Name:</label>
+				<input type="text" name="user_name"/>
+			</p>
+
+			<p>
+				<label>Country:</label>
+				<select name="where">
+					<option>Choose a country</option>
+					<option>Greece</option>
+					<option>Italy</option>
+					<option>United States</option>
+				</select>
+			</p>
+			
+			<p>
+				<label>Which city do you live in:</label>
+				<input type="text" name="city" list="cities"/>
+				<datalist id="cities">
+					<option>Boston</option>
+					<option>Calcutta</option>
+					<option>London</option>
+					<option>Paris</option>
+					<option>Prague</option>
+					<option>Taipei</option>
+				</datalist>
+				<br/><br/>
+
+				<label>Phone Number:</label>
+				<input type="tel" name="phone"/>
+				<br/><br/>
+				
+				<label>Your Email:</label>
+				<input type="email" name="email"/>
+				<br/><br/>
+
+				<label>Password:</label>
+				<input type="password" name="password"/>
+				<br/><br/>
+
+				<label>Your website URL:</label>
+				<input type="url" name="url"/>
+				<br/><br/>
+
+				<textarea placeholder="enter your comments here"></textarea>
+			</p>
+			<input type="submit" />
+		</fieldset>
+	</form>
+</body>
+</html>
+
