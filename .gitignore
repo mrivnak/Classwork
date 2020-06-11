@@ -408,3 +408,5 @@ pip-selfcheck.json
 
 # End of https://www.gitignore.io/api/c,node,venv,react,cmake,fsharp,django,python,fortran,visualstudiocode
 
+
+.fake
