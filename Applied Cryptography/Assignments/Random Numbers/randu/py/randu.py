@@ -15,7 +15,7 @@ plt.xticks(fontname='Ubuntu Mono', fontsize=12)
 plt.yticks(fontname='Ubuntu Mono', fontsize=12)
 #-----------------------------------------------------------------------
 
-x, y, z = np.loadtxt(".dat/randu - trimmed.csv", delimiter=',', unpack=True) # load data from file
+x, y, z = np.loadtxt(".dat/randu.csv", delimiter=',', unpack=True) # load data from file
 
 ax.plot(x,y,z,'.')
 ax.view_init(45,-45) # set initial view
