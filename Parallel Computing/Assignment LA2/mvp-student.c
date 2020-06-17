@@ -6,12 +6,12 @@
 
 int rank, numranks;
 
-const unsigned int nodes = 5;
-const unsigned int mult = 4;
+const int nodes = 1;
+const int mult = 10000;
 
 //Main function
 int main (int argc, char **argv) {
-    const unsigned int size = nodes * mult;
+    const int size = nodes * mult;
 
     MPI_Init(&argc, &argv);
     MPI_Comm_size(MPI_COMM_WORLD, &numranks);
@@ -27,7 +27,7 @@ int main (int argc, char **argv) {
     double * result = mvp(matrix, vector, size);
     
     if (rank == 0) {
-        printMatVec(matrix, vector, result, size, size);
+        // printMatVec(matrix, vector, result, size, size);
     }
 
     MPI_Finalize();
@@ -40,7 +40,10 @@ double* mvp(double* mat, double* vec, int n) {
     double * result = (double*) malloc(n*sizeof(double));
 
     double * data = (double*) malloc(mult*n*sizeof(double));
+    double commStart = MPI_Wtime();
     MPI_Scatter(mat, n*mult, MPI_DOUBLE, data, n*mult, MPI_DOUBLE, 0, MPI_COMM_WORLD);
+    if (rank == 0)
+        printf("Scatter done after: %f\n", MPI_Wtime()-commStart);
 
     // printf("Rank %d:\n", rank);
    
@@ -50,17 +53,22 @@ double* mvp(double* mat, double* vec, int n) {
 
     double * resultPart = (double*) malloc(mult*sizeof(double));
     
+    double compStart = MPI_Wtime();
     for (int i = 0; i < mult; i++) {
         resultPart[i] = dot(data + (i*n), vec, n);
     }
+    if (rank == 0)
+        printf("Computation done after: %f\n", MPI_Wtime()-compStart);
 
     // printf("Rank %d result:\n", rank);
     // printVec(resultPart, mult);
     
     MPI_Gather(resultPart, mult, MPI_DOUBLE, result, mult, MPI_DOUBLE, 0, MPI_COMM_WORLD);
+    
     if (rank == 0) {
-        printVec(result, n);
+        // printVec(result, n);
     }
+
     return result;
 }
 

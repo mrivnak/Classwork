@@ -5,7 +5,7 @@ NC='\033[0m'
 YELLOW='\033[1;33m'
 echo
 echo -e ${GREEN}Compiling Test Suite...${NC}
-temp=$(make)
+temp=$(make clean)
 make all
 echo
 echo -e ${GREEN}Submitting Test Suite to Cluster...${NC}
