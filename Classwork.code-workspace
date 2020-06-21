@@ -10,27 +10,7 @@
 		},
 		{
 			"name": "Forum",
-			"path": "Web Development\\Project\\Forum"
-		},
-		{
-			"name": "Assignment 0",
-			"path": "Parallel Computing\\Assignment 0"
-		},
-		{
-			"name": "Intro",
-			"path": "Programming Languages\\F#\\Intro"
-		},
-		{
-			"name": "Lab 1",
-			"path": "Programming Languages\\F#\\Lab 1"
-		},
-		{
-			"name": "Lab 2",
-			"path": "Programming Languages\\F#\\Lab 2"
-		},
-		{
-			"name": "Lab 3",
-			"path": "Programming Languages\\F#\\Lab 3"
+			"path": "Web Development/Project/Forum"
 		},
 		{
 			"name": "Codecamp",
