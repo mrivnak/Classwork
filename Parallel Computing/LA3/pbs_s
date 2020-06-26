@@ -1,0 +1,13 @@
+#!/bin/bash
+#PBS -l nodes=6:ppn=12,walltime=00:00:10
+#PBS -q batch
+#PBS -N LA3_Primes
+#PBS -j oe
+#this should work to send the env, but it's not
+#PBS -V
+
+#cat $PBS_NODEFILE
+cd /home/rivnakm/assignments/LA3
+export COUNTER1=P_WALL_CLOCK_TIME
+export COUNTER2=PAPI_L1_DCM
+mpiexec -np 6 --map-by ppr:2:node -x COUNTER1 -x COUNTER2 --hostfile $PBS_NODEFILE /home/rivnakm/assignments/LA3/LA3
