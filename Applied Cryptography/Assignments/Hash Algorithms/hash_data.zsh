@@ -1,8 +1,12 @@
 #!/usr/bin/zsh
 
+echo "Creating output directory..."
+
+mkdir hashes_output
+
 echo "Cleaning previous data..."
 
-rm hash_times.txt hashes.d/*
+rm hash_times.txt hashes_output/*
 
 echo "\nCalculating hashes..."
 
@@ -17,7 +21,7 @@ for ((i = 1; i <= ${#hash_names[@]}; i++)); do
     {
         time (
             for ((j = 0; j < 1000; j++)); do
-                openssl ${hash_filenames[$i]} data.txt >> ./hashes.d/${hash_filenames[$i]}
+                openssl ${hash_filenames[$i]} data.txt >> ./hashes_output/${hash_filenames[$i]}
             done
         )
     } 2>> hash_times.txt
@@ -27,5 +31,5 @@ echo "\nValidating hashes..."
 
 for ((i = 1; i <= ${#hash_names[@]}; i++)); do
     echo "[$i/${#hash_names[@]}] ${hash_names[$i]}..."
-    awk '!unique[$0]++ { count++ } END { print count == 1 ? "Passed!" : "Failed! :("  }' ./hashes.d/${hash_filenames[$i]}
+    awk '!unique[$0]++ { count++ } END { print count == 1 ? "Passed!" : "Failed! :("  }' ./hashes_output/${hash_filenames[$i]}
 done

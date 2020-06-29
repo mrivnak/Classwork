@@ -1,84 +1,84 @@
 BLAKE2b512:
 
-real	8.879
-user	6.865
-sys		1.800
+real	10.400
+user	8.754
+sys		1.684
 
 MD5:
 
-real	9.654
-user	7.460
-sys		1.998
+real	11.567
+user	9.831
+sys		1.774
 
 SHA1:
 
-real	8.372
-user	6.215
-sys		2.005
+real	9.169
+user	7.426
+sys		1.785
 
 RIPEMD-160:
 
-real	18.198
-user	15.582
-sys		2.266
+real	23.134
+user	21.297
+sys		1.865
 
 SHA224:
 
-real	14.118
-user	11.618
-sys		2.207
+real	15.792
+user	13.924
+sys		1.902
 
 SHA256:
 
-real	13.912
-user	11.498
-sys		2.174
+real	15.935
+user	14.002
+sys		1.965
 
 SHA384:
 
-real	10.931
-user	8.565
-sys		2.111
+real	11.860
+user	10.025
+sys		1.871
 
 SHA512:
 
-real	11.087
-user	8.712
-sys		2.072
+real	11.862
+user	10.004
+sys		1.895
 
 SHA3-224:
 
-real	14.554
-user	12.102
-sys		2.107
+real	17.801
+user	15.996
+sys		1.834
 
 SHA3-256:
 
-real	14.957
-user	12.507
-sys		2.132
+real	19.077
+user	17.087
+sys		2.000
 
 SHA3-384:
 
-real	18.192
-user	15.778
-sys		2.131
+real	27.210
+user	24.093
+sys		2.928
 
 SHA3-512:
 
-real	24.675
-user	22.039
-sys		2.152
+real	33.712
+user	31.182
+sys		2.480
 
 SHAKE128:
 
-real	13.446
-user	10.956
-sys		2.089
+real	16.234
+user	14.168
+sys		2.090
 
 SHAKE256:
 
-real	15.898
-user	13.012
-sys		2.360
+real	18.949
+user	16.882
+sys		2.092
 
