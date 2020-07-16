@@ -2,11 +2,11 @@
 
 echo "Creating output directory..."
 
-mkdir hashes_output
+mkdir hashes_output >> /dev/null
 
 echo "Cleaning previous data..."
 
-rm hash_times.txt hashes_output/*
+rm hash_times.txt hashes_output/* >> /dev/null
 
 echo "\nCalculating hashes..."
 
