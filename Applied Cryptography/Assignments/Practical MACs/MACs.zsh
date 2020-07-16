@@ -4,4 +4,4 @@ openssl enc -aes-256-cbc -e -nosalt -K 80000000000000000000000000000000000000000
 
 openssl dgst -sha256 -mac hmac -macopt key:0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b message.txt > message.txt.sha256-hmac
 
-openssl dgst -sha3-512 -mac hmac -macopt key:b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0 message.txt > message.txt.sha256-hmac
+openssl dgst -sha3-512 -mac hmac -macopt key:b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0b0 message.txt > message.txt.sha3-512-hmac
