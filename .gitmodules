@@ -13,3 +13,6 @@
 	url = https://github.com/mrivnak/Forum
 	update = merge
 	branch = develop
+[submodule "Programming Languages/CodeParser"]
+	path = Programming Languages/CodeParser
+	url = https://github.com/mrivnak/CodeParser.git

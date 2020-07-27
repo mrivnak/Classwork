@@ -28,7 +28,7 @@ the form
 ```css
 .highlighted {
    background-color: #FF3333 !important;
-   box-shadow: 0 0 10px #ff3333;
+   box-shadow: 0 0 10px #FF3333;
 }
 ```
 
@@ -71,12 +71,10 @@ function highlightEmpty() {
         acceptLicense.parentElement.classList.add('highlighted');
     }
 }
-
-
 ```
 
 ### Screenshots
 
-![highlighted text](https://ibb.co/XSVFb59)
+![highlighted text](https://i.ibb.co/9sGyN4J/image.png)
 
-![highlight check box](https://ibb.co/80QKNJk)
+![highlight check box](https://i.ibb.co/Y3VRP6g/image.png)
