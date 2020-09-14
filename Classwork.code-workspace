@@ -3,17 +3,6 @@
 		{
 			"name": "Classwork",
 			"path": "."
-		},
-		{
-			"name": "GameBoy",
-			"path": "Senior Project/GameBoy"
-		},
-		{
-			"name": "Forum",
-			"path": "Web Development/Project/Forum"
-		},
-		{
-			"path": "Software Engineering/Codecamp"
 		}
 	]
 }

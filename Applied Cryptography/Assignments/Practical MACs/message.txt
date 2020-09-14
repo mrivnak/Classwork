@@ -1,1 +1,0 @@
-MACs are very useful in cryptography!           

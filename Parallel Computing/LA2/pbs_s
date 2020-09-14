@@ -1,9 +1,0 @@
-#!/bin/bash
-#PBS -l nodes=5:ppn=12
-#PBS -l walltime=00:00:30
-#PBS -q batch
-#PBS -N COMP3450_LA2
-#PBS -j oe
-
-#cat $PBS_NODEFILE
-mpiexec -np 5 --map-by ppr:1:node --hostfile $PBS_NODEFILE ~/assignments/LA2/mvp-student.cx
