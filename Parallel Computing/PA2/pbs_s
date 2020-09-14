@@ -1,9 +1,0 @@
-#!/bin/bash
-#PBS -l nodes=8:ppn=12
-#PBS -l walltime=00:00:10
-#PBS -q batch
-#PBS -N COMP3450_PA2
-#PBS -j oe
-
-#cat $PBS_NODEFILE
-mpiexec -np 6 --map-by ppr:1:node --hostfile $PBS_NODEFILE ~/assignments/PA2/PA2.cx
