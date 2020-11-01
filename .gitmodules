@@ -16,3 +16,9 @@
 [submodule "Programming Languages/CodeParser"]
 	path = Programming Languages/CodeParser
 	url = https://github.com/mrivnak/CodeParser.git
+[submodule "Game Development/pa1-it-s-not-a-bug-it-s-a-feature"]
+	path = Game Development/pa1-it-s-not-a-bug-it-s-a-feature
+	url = https://github.com/witcomp3800-gamedev/pa1-it-s-not-a-bug-it-s-a-feature
+[submodule "Game Development/pa2-it-s-not-a-bug-it-s-a-feature"]
+	path = Game Development/pa2-it-s-not-a-bug-it-s-a-feature
+	url = https://github.com/witcomp3800-gamedev/pa2-it-s-not-a-bug-it-s-a-feature
