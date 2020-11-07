@@ -23,11 +23,14 @@ then
     exit 1
 fi
 
-read -p "Zip code: " zip
-if [[ ! $zip =~ ^[0-9]{5}$ ]]
+read -p "Email address: " email
+email_reg="^[0-9a-zA-Z\._-]+@[0-9a-zA-Z\._-]+$"
+if [[ ! $email =~ $email_reg ]]
 then
-    echo "Error: Zip code must be exactly 5 digits"
+    echo "Error: Email address must be USER@DOMAIN, where both USER and DOMAIN must be only letters, numbers, dots, underscores, and hyphens!"
     exit 1
 fi
+
+echo "Validated!"
 
 #END SCRIPT
