@@ -1,24 +1,9 @@
-[submodule "Software Engineering/Codecamp"]
-	path = Software Engineering/Codecamp
-	url = https://github.com/mrivnak/codecamp.git
-	update = merge
-	branch = master
-[submodule "Senior Project/GameBoy"]
-	path = Senior Project/GameBoy
-	url = https://github.com/mrivnak/GameBoy
-	update = merge
-	branch = develop
-[submodule "Web Development/Project/Forum"]
-	path = Web Development/Project/Forum
-	url = https://github.com/mrivnak/Forum
-	update = merge
-	branch = develop
-[submodule "Programming Languages/CodeParser"]
-	path = Programming Languages/CodeParser
-	url = https://github.com/mrivnak/CodeParser.git
 [submodule "Game Development/pa1-it-s-not-a-bug-it-s-a-feature"]
 	path = Game Development/pa1-it-s-not-a-bug-it-s-a-feature
 	url = https://github.com/witcomp3800-gamedev/pa1-it-s-not-a-bug-it-s-a-feature
 [submodule "Game Development/pa2-it-s-not-a-bug-it-s-a-feature"]
 	path = Game Development/pa2-it-s-not-a-bug-it-s-a-feature
 	url = https://github.com/witcomp3800-gamedev/pa2-it-s-not-a-bug-it-s-a-feature
+[submodule "Game Development/You-Cant-Save-Them-All"]
+	path = Programming Languages/You-Cant-Save-Them-All
+	url = https://github.com/mrivnak/You-Cant-Save-Them-All
