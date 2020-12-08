@@ -4,3 +4,6 @@
 [submodule "Game Development/pa2-it-s-not-a-bug-it-s-a-feature"]
 	path = Game Development/pa2-it-s-not-a-bug-it-s-a-feature
 	url = https://github.com/witcomp3800-gamedev/pa2-it-s-not-a-bug-it-s-a-feature
+[submodule "Game Development/final-project-it-s-not-a-bug-it-s-a-feature"]
+	path = Game Development/final-project-it-s-not-a-bug-it-s-a-feature
+	url = https://github.com/witcomp3800-gamedev/final-project-it-s-not-a-bug-it-s-a-feature
